@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>입력양식 실습</title>
+    <title>입력양식 실습 - a요소 사용하여</title>
     <style>
         div#wrap {
             width: 600px;
@@ -24,6 +24,12 @@
         button {
             font-size: 20px;
         }
+
+        form {
+            padding: 20px;
+            border: 1px solid #08f;
+            margin-bottom: 600px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +44,8 @@
             첨부파일 <input type="file" name="imgfILE">
             <button type="submit">submit</button>
         </form>
+        <!-- a href="주소?데이터변수=데이터값" -->
+        <a href="#?sample=전송할데이터">a요소를 사용한 데이터를 전송</a>
     </div>
 </body>
 </html>

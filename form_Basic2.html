@@ -30,13 +30,14 @@
     <div id="wrap">
         <h1>입력양식 실습</h1>
         <hr>
-        <!-- action="데이터 전달 위치" method="전송방식"  -->
-        <!-- input[type=file]을 사용할 경우 form태그에 반드시
-            enctype="multipart/form-data"를 사용해야함 -->
-        <form action="member/join.html" method="POST" enctype="multipart/form-data">
-            입력내용<input type="text" name="test">
-            첨부파일 <input type="file" name="imgfILE">
-            <button type="submit">submit</button>
+        <form>
+            입력내용<input type="text" name="test" value="초기값">
+            <button type="reset">reset</button>
+            <!-- input에 value 값이 지정되어있으면,
+                reset을 하여도 초기상태로 돌아가므로 
+                value값은 유지 된다.
+             -->
+             <!-- 참고, button의 기본 값은 submit 임 -->
         </form>
     </div>
 </body>
