@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input type practoce</title>
+    <style>
+        div#wrap {
+            width: 800px;
+            padding: 20px;
+            border: 1px solid #000;
+            margin: 20px auto;
+        }
+
+        form {
+            font-size: 22px;
+            padding: 20px;
+            border: 1px solid #08f;
+            margin-bottom: 100px;
+        }
+
+        input {
+            font-size: 22px;
+        }
+
+        button {
+            font-size: 20px;
+        }
+
+        input[type=text]::placeholder {
+            color: #f00;
+        }
+        /* :: => 슈도 엘리먼트
+            : => 슈도 클래스
+         */
+
+         input[type=radio] {
+             width: 30px;
+             height: 30px;
+         }
+
+         input[type=checkbox] {
+             width: 20px;
+             height: 20px;
+         }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>입력양식실습</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <h3>input type="text"</h3>
+            텍스트(text) <input type="text" placeholder="입력힌트기재"> 1줄입력
+            size 값으로 가로 폯을 조정할 수 있고,
+            size="20"이 default 값
+            원래 inline 요소는 width 값을 설정해도 영향을 받지 X 이나, 가능함 ㅋㅋ
+            <hr>
+
+            <h3>input type="password"</h3>
+            패스워드(password) <input type="password"> 1줄 암호입력
+            size="30"이 default 값
+            <hr>
+
+            <h3>input type="radio"</h3>
+            라디오버튼(radio) 
+            <br>
+            <fieldset id="genderArea">
+                <legend>성별</legend>
+                남 <input type="radio" name="gender">
+                여 <input type="radio" name="gender">
+            </fieldset>
+            <br><br>
+
+            <h3>input type="checkbox"</h3>
+            체크박스(checkbox) 
+            <br>
+            <fieldset id="hobbyArea">
+                <legend>취미</legend>
+                영화 <input type="checkbox">
+                독서 <input type="checkbox">
+                여행 <input type="checkbox">
+            </fieldset>
+            <br><br>
+
+            <h3>input type="file"</h3>
+            <p style="color: red;">form태그에 method="post" enctype="multipart/form-data"로 반드시 변경후 사용하세요!</p>
+            <br><br>
+
+            <h3>input type="image"</h3>
+            <p> 이미지를 사용한 실행(submit)버튼 인데, 지금은 잘 사용X 걍 있다고~~ 참고, form  태그에 action  넣는거 잊지마세용</p>
+            <input type="image" src="images/MainAfter.jpg" style="width: 200px;">
+
+            <h3>input type etc.</h3>
+            실행버튼 <input type="submit" value="변경된 버튼이름"><br> <!-- default value 값, 일종의 버튼명(=캡션) 있음, value 값 넣어서 바꿔 주면 됨. -->
+            초기화버튼 <input type="reset" value="reset button"><br>
+            무기능버튼 <input type="button" value="just button"><br>
+            비노출방식시작 (= 데이터 전송만을 목적, hidden)
+            <br>
+            [ <input type="hidden"> ] 
+            <p> 로그인 유지와 같은 등, 페이지 전환시에도 유지 해야하는 값을 입력하는 기능을 한다.</p>
+            <br>
+            비노출방식 끝
+            <hr>
+            <button type="submit">submit</button><br>
+        </form>
+    </div>
+</body>
+</html>
